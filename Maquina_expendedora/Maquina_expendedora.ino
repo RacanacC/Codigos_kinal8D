@@ -59,7 +59,7 @@ if(digitalRead(selecB)==HIGH){
 if(x<1){
   x = 4;
 }
-}
+    } 
 
 switch(x){
   case (1): Serial.println("-------------------------------------");
