@@ -40,15 +40,18 @@ void loop() {
 if(digitalRead(selecG)==HIGH){
   y = 1;
 }
-if(digitalRead(selecG)==HIGH){
+
+if(digitalRead(selecB)==HIGH){
+  y = 1;
+}
+
+while(y==1){
+  if(digitalRead(selecG)==HIGH){
   x = x + 1;
   delay(200);
 }
 if(x>4){
   x = 1;
-}
-if(digitalRead(selecB)==HIGH){
-  y = 1;
 }
 if(digitalRead(selecB)==HIGH){
   x = x - 1;
@@ -57,8 +60,6 @@ if(x<1){
   x = 4;
 }
 }
-while(y==1){
-  
 
 switch(x){
   case (1): Serial.println("-------------------------------------");
